@@ -1,3 +1,7 @@
+#AUTHOR: TREVOR CONGER UNWSP
+#DATE: 11/22/2024
+#PURPOSE: CALCULATE THE TOTAL COST OF SERVICES AT JOES AUTOMOTIVE
+
 import tkinter
 
 class GUIJoesAutomotive:
@@ -37,7 +41,6 @@ class GUIJoesAutomotive:
             )
             check.pack(anchor='w')
 
-        # Label and variable to display the total
         self.result_label = tkinter.Label(
             self.result_frame,
             text="Total Cost: ",
@@ -56,7 +59,6 @@ class GUIJoesAutomotive:
         self.result_label.pack(side='left', padx=10)
         self.total_label.pack(side='left')
 
-        # Buttons
         self.calc_button = tkinter.Button(
             self.button_frame,
             text='Calculate Total',
@@ -76,7 +78,8 @@ class GUIJoesAutomotive:
         self.button_frame.pack(pady=10)
 
         tkinter.mainloop()
-
+        
+    #CALCULATE THE TOTAL COST OF SERVICES
     def calculate_total(self):
         total = 0
         for var, price in self.service_vars.values():
